@@ -13,7 +13,7 @@ export class TextDocumentProvider implements vscode.TextDocumentContentProvider,
     }        
 
     public saveResult(requestHash:string, result:any){
-        this.map[requestHash] = result;
+        this.map[requestHash] = result;       
     }
 
     public retrieveResult(hash:string){
