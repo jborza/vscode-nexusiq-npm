@@ -28,15 +28,17 @@
         "nexusiq.npm.url": {
           "type": "string",
           "default": "http://127.0.0.1:8070",
-          "description": "URL to the Nexus IQ server"
+          "description": "URL of the Nexus IQ server"
         },
         "nexusiq.npm.username": {
           "type": "string",
-          "default": "admin"
+          "default": "admin",
+          "description": "Your Nexus IQ user name"
         },
         "nexusiq.npm.password": {
           "type": "string",
-          "default": "admin123"
+          "default": "admin123",
+          "description": "Your Nexus IQ password"
         }
       }
     }
