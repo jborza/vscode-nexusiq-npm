@@ -18,15 +18,15 @@ Access to a Nexus IQ server instance is required.
 
 ## Extension Settings
 
-This extension contributes the following settings:
+This extension uses the following settings:
+
 * `nexusiq.npm.url`: URL to the Nexus IQ server (with http:// included)
 * `nexusiq.npm.username`
 * `nexusiq.npm.password`
- 
+
+![settings](settings.png)
 
 ## Release Notes
-
-Users appreciate release notes as you update your extension.
 
 ### 0.0.1
 
