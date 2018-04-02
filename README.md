@@ -1,5 +1,7 @@
 # vscode-nexusiq-npm README
 
+[![Build Status](https://travis-ci.org/jborza/vscode-nexusiq-npm.svg?branch=master)](https://travis-ci.org/jborza/vscode-nexusiq-npm)
+
 This is an unofficial Visual Studio Code extension for evaluating npm projects with Sonatype Nexus IQ server.
 
 ## Features
