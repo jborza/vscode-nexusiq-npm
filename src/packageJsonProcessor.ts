@@ -13,15 +13,17 @@ export class PackageJsonProcessor{
         }
         try{
             let { stdout, stderr} = await exec("npm shrinkwrap",{cwd:workspaceRoot});
-			if (stdout) {
+            let npmShrinkWrapFile = "npm-shrinkwrap.json";
+            let shrinkWrapSucceeded = stdout || stderr.search(npmShrinkWrapFile)>-1
+			if (shrinkWrapSucceeded) {
 				let lines = stdout.split(/\r{0,1}\n/);
                 //read npm-shrinkwrap.json
-				let obj = JSON.parse(fs.readFileSync(path.join(workspaceRoot,"npm-shrinkwrap.json"), "utf8"));
+				let obj = JSON.parse(fs.readFileSync(path.join(workspaceRoot, npmShrinkWrapFile), "utf8"));
 				return this.flattenAndUniqDependencies(obj);
 			}
 		}
 		catch(e){
-            return Promise.reject('npm shrinkwrap failed, try running it manually to see what went wrong');
+            return Promise.reject('npm shrinkwrap failed, try running it manually to see what went wrong:' + e.error.message);
 		}
     }
 
